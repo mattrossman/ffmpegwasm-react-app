@@ -7,6 +7,7 @@ function App() {
   const [message, setMessage] = useState('Click Start to transcode');
   const ffmpeg = createFFmpeg({
     log: true,
+    corePath: new URL("ffmpeg/ffmpeg-core.js", window.location.origin),
   });
   const doTranscode = async () => {
     setMessage('Loading ffmpeg-core.js');
